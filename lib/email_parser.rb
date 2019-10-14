@@ -1,17 +1,13 @@
 class EmailAddressParser
   attr_accessor :email_addresses
   
-  def initialize(email_addresses)
-    @email_addresses = email_addresses
-    @string = ""
+  def initialize(email)
+    @emails = email
   end
-  
-  def parse(email)
-    @email_addresses = email
-    # CSV parse
-    self.new(@email_addresses)
-    @string = self.email.split(",").join(",")
-    puts @string
-  end
-  @string
+
+def parse
+  emails.delete(',').split.uniq
+end
+
+end 
 end  
