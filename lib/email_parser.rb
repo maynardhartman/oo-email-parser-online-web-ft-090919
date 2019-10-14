@@ -8,7 +8,7 @@ class EmailAddressParser
   
   def parse(email_addresses)
     # CSV parse
-    self.new ("avi@test.com, arel@test.com")
+    self.new(email_addresses)
     @string = self.email_addresses.split(",").join(",")
     puts @string
   end
