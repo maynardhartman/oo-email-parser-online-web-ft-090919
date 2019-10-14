@@ -8,6 +8,4 @@ class EmailAddressParser
 def parse
   emails.delete(',').split.uniq
 end
-
-end 
-end  
+end
