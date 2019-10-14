@@ -6,10 +6,11 @@ class EmailAddressParser
     @string = ""
   end
   
-  def parse(email_addresses)
+  def parse(email)
+    @email_addresses = email
     # CSV parse
-    self.new(email_addresses)
-    @string = self.email_addresses.split(",").join(",")
+    self.new(@email_addresses)
+    @string = self.email.split(",").join(",")
     puts @string
   end
   @string
